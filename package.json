@@ -1,0 +1,32 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:auth": "playwright test tests/auth",
+    "test:allure": "rimraf allure-results allure-report && playwright test",
+    "test:allure:report": "npm run test:allure && npm run allure:generate",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sreelatha18pp/test1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sreelatha18pp/test1/issues"
+  },
+  "homepage": "https://github.com/Sreelatha18pp/test1#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.5.0",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.12.0",
+    "rimraf": "^6.1.3"
+  }
+}
