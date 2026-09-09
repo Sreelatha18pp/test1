@@ -13,6 +13,7 @@ export class LoginPage {
     this.passwordInput = page.getByRole('textbox', { name: 'Password' });
     this.loginButton = page.getByRole('button', { name: 'Login' });
     this.errorMessage = page.locator('h3').filter({ hasText: 'Epic sadface:' });
+     this.errorMessage = page.locator('h3').filter({ hasText: 'Epic sadface:' });
   }
 
   async open(): Promise<void> {
