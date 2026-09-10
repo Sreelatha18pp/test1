@@ -26,6 +26,7 @@ export class CartPage {
   async expectItem(name: string, price: string): Promise<void> {
     const item = this.cartItems.filter({ hasText: name });
     await expect(item).toHaveCount(1);
+     await expect(item).toHaveCount(1);
     await expect(item).toContainText(price);
   }
 
